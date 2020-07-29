@@ -18,7 +18,8 @@ export const Order = ({ orderItems }) => (
           data-test-id="order-item"
         >
           <div className="order__name" data-test-id={`order-name-${item.id}`}>
-            <h3>🌯 {item.name}</h3>
+            {/* <h3>🌯 {item.name}</h3> */}
+            <span role="img" aria-label="burrito">🌯 {item.name}</span>
           </div>
           <div className="order__price">
             <h3>
@@ -41,12 +42,12 @@ export const Order = ({ orderItems }) => (
         </span>
       </h4>
     ) : (
-      <h4
-        className="order__heading--nothing"
-        data-test-id="order-heading-nothing"
-      >
-        It looks like you have an empty stomach, order now! 🌯🌯🌯
+      <h4 className="order__heading--nothing">
+         {/*  It looks like you have an empty stomach, order now! 🌯🌯🌯 */}
+         <span role="img" aria-label="burrito">It looks like you have an empty stomach, order now! 🌯🌯🌯</span>
       </h4>
+      
+
     )}
   </section>
 );
